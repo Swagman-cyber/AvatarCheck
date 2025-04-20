@@ -35,3 +35,13 @@ Before inviting AvatarCheck to your server, make sure you have the following:
 ## Usage Instructions
 
 1. Once AvatarCheck is invited to your server, users can start the verification process by typing the following command:
+
+!verify <roblox_username>
+
+2. The bot will reply with a unique verification code and instruct the user to add it to their Roblox profile "About Me" section.
+
+3. After updating the Roblox profile, the user will type the following command:
+
+
+4. If the code matches, the bot will assign the **"Verified"** role and remove the **"Unverified"** role.
+
