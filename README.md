@@ -1,45 +1,37 @@
-# AvatarCheck Bot
+# AvatarCheck Discord Bot
 
-AvatarCheck is a Discord bot that allows you to easily **verify** users in your server by checking their Roblox profile for a unique verification code. Once verified, the bot will automatically assign the **Verified** role to the user.
-
----
-
-## Features
-
-- **Roblox Account Verification**: Users can verify their Roblox account by adding a unique code to their Roblox profile's About Me section.
-- **Automatic Role Assignment**: Once the user is verified, they will be assigned the **Verified** role in your server.
-- **Prevents Reuse of Codes**: The bot ensures that codes cannot be reused by checking if the code has been used before.
-
----
+AvatarCheck is a Discord bot that allows server administrators to verify users by checking their Roblox profile. When a user enters a verification code in their Roblox "About Me", they can confirm their identity in Discord and be assigned a "Verified" role.
 
 ## How It Works
 
-1. **User Verification**:
-   - Users in your server type `!verify <RobloxUsername>` in any text channel where the bot has permission.
-   - The bot will generate a unique verification code and ask the user to place it in their **About Me** section of their Roblox profile.
+1. Users will type `!verify <username>` to begin the verification process.
+2. The bot will provide a unique code that the user must paste into their Roblox "About Me" section.
+3. Once the user has added the code to their Roblox profile, they will type `!confirm` in Discord to complete the verification.
+4. If the bot confirms that the code matches the one in the user's profile, the bot will assign them the **Verified** role in Discord.
 
-2. **Confirmation**:
-   - After updating their Roblox profile with the verification code, users type `!confirm` to confirm.
-   - The bot will then check the profile description for the verification code. If the code matches, the user is given the **Verified** role.
+## Requirements
 
----
+Before inviting AvatarCheck to your server, make sure you have the following:
 
-## Prerequisites
+- A **"Verified" role** in your Discord server.
+- A **"Unverified" role** for users who haven't completed the verification process yet.
+- Users must follow the verification steps to be assigned the "Verified" role.
+  
+> **Note:** The role names **must** be **exactly** "Verified" and "Unverified" (case-sensitive) for the bot to work properly.
 
-- **Verified Role**: Ensure that your Discord server has a **Verified** role. This role will be assigned to users once they are verified.
+## How to Add AvatarCheck to Your Server
 
----
+1. **Invite the Bot**: [Click here to invite AvatarCheck](https://discord.com/oauth2/authorize?client_id=1363198207391432788&permissions=268503040&integration_type=0&scope=bot).
+   - Make sure the bot has permissions to **Send Messages**, **Read Messages**, and **Manage Roles** to assign the "Verified" role.
 
-## How to Add the Bot to Your Server
+2. **Create the Roles**:
+   - Create a **"Verified"** role in your server for verified users.
+   - Create an **"Unverified"** role for users who have not completed the verification process yet.
+   
+3. **Role Configuration**:
+   - Make sure the bot has permission to assign the "Verified" role.
+   - Users must be assigned the **"Unverified"** role by default when they join the server.
 
-1. **Invite the Bot**: Click the link below to add AvatarCheck to your Discord server:
-   - [Invite AvatarCheck](YOUR_BOT_INVITE_LINK)
+## Usage Instructions
 
-2. **Create the Verified Role**: Ensure your server has a role named **Verified**. This is the role the bot will assign to users once they are verified.
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
+1. Once AvatarCheck is invited to your server, users can start the verification process by typing the following command:
